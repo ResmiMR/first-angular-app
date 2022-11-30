@@ -1,0 +1,17 @@
+<p>first-page works!</p>
+
+<h1> title is {{title}}</h1>
+
+<button [disabled]="isDisabled"   (click)="doCheck()">Click Me</button>
+
+<input type="text"  [(ngModel)] = "title"/>
+
+<p>title eneterd is {{title}}</p>
+
+<div>
+<app-child *ngFor="let country of countries" [country]="country"  (childMessage)="OnChildClick($event)" ></app-child>
+</div>
+
+
+<h2>Message from child {{childMsg}}</h2>
+
